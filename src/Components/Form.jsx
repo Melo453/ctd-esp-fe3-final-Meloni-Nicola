@@ -11,16 +11,16 @@ const Form = () => {
   const handleSubmit = (e) => {
    e.preventDefault();
    if(name.length <= 5 || !emailRegex.test(email)){
-    setMessage("Por favor verifique su informacion nuevamente")
+    setMessage("Por favor, verifique que su nombre contenga más de 5 caracteres y que su email tenga un formato correcto")
    }else
-      setMessage(`Gracias ${name},${email}`)
+      setMessage(`"Gracias ${name } ,te contactaremos cuanto antes vía mail”`)
 
   }
 
   return (
     <div>
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+      <h2>Querés conocer más?</h2>
+      <p>Contactanos y te responderemos lo antes posible</p>
       <form onSubmit={handleSubmit}>
         <input type="text" value={name} onChange={e => setName(e.target.value)} />
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} />

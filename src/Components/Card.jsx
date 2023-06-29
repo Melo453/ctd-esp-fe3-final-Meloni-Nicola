@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ dentist }) => {
+const Card = ({ dentist, button }) => {
 
-  const addFav = ()=>{
+  const handleFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
   }
 
+  
   return (
     <div className="card">
 
@@ -16,18 +17,13 @@ const Card = ({ dentist }) => {
             <p>{dentist.id}</p>
 
             <Link to={`/dentist/${dentist.id}`}>
-            ir
+            Ver
             </Link>
           </div>
-
-        {/* En cada card deberan mostrar en name - username y el id */}
-
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+          
+        <button onClick={()=>{button(dentist)}} className="favButton">Add fav</button>
     </div>
   );
 };
 
-export default Card;
+export default Card;

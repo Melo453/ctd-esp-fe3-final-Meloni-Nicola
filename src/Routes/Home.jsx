@@ -9,12 +9,30 @@ const Home = () => {
   
   const [dentist,setDentist] = useState([])
 
+  const [favs, setFavs] = useState([]);
+
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => {
         setDentist(res.data)
-      })
+      }) 
   },[])
+  
+  function handleFav(objeto) {
+    const localData = localStorage.getItem("favoritos");
+    const data = localData ? JSON.parse(localData) : [];
+    const actualizado = data.filter((data) => data.id != objeto.id);
+    if (actualizado.length < favs.length) {
+      setFavs(actualizado);
+      localStorage.setItem("favs", JSON.stringify(actualizado));
+    } else {
+      setFavs([...actualizado, objeto]);
+      localStorage.setItem(
+        "favs",
+        JSON.stringify([...actualizado, objeto])
+      );
+    }
+  }
   
   return (
     <main className="" >
@@ -22,7 +40,7 @@ const Home = () => {
       <div className='card-grid'>
         <ol>
           {dentist.map(dentista => {
-              return <Card key={dentista.id} dentist={dentista}/>
+              return <Card key={dentista.id} dentist={dentista} button={handleFav}/>
           })}
         </ol>
       </div>
@@ -30,4 +48,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home
