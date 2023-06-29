@@ -6,7 +6,7 @@ const Favs = () => {
   const [dentists, setDentists] = useState([]);
 
   useEffect(() => {
-    const savedDentists = localStorage.getItem("favoriteDentists");
+    const savedDentists = localStorage.getItem("favs");
     if (savedDentists) {
       const parsedDentists = JSON.parse(savedDentists);
       setDentists(parsedDentists);
