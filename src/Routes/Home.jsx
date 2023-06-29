@@ -25,15 +25,14 @@ const Home = () => {
     if (actualizado.length < favs.length) {
       setFavs(actualizado);
       localStorage.setItem("favs", JSON.stringify(actualizado));
-      
     } else {
       setFavs([...actualizado, objeto]);
       localStorage.setItem(
         "favs",
         JSON.stringify([...actualizado, objeto])
-      );
-    }
-  }
+      );
+    } 
+  }
   
   return (
     <main className="" >
