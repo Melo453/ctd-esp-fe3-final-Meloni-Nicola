@@ -18,15 +18,17 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <h2>Querés conocer más?</h2>
-      <p>Contactanos y te responderemos lo antes posible</p>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={name} onChange={e => setName(e.target.value)} />
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-        <button type='submit'>Enviar</button>
-        <p>{message }</p>
-      </form>
+    <div className="contact">
+      <div className="card-contact">
+        <h2 className="h2-contact">Querés conocer más?</h2>
+        <p className="p-contact">Contactanos y te responderemos lo antes posible</p>
+        <form onSubmit={handleSubmit} className="form-formulario">
+          <input className="name" type="text" value={name} placeholder="Nombre" onChange={e => setName(e.target.value)} />
+          <input type="email" className="email" value={email} placeholder="Email" onChange={e => setEmail(e.target.value)} />
+          <button type='submit'>Enviar</button>
+          <p>{message }</p>
+        </form>
+      </div>
     </div>
   );
 };

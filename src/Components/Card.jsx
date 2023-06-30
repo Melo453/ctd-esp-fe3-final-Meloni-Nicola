@@ -9,9 +9,8 @@ const Card = ({ dentist, button }) => {
 
   
   return (
-    <div className="card">
+    <div className="card" >
 
-        <div>
             <h2>{dentist.name}</h2>
             <p>{dentist.username}</p>
             <p>{dentist.id}</p>
@@ -19,7 +18,6 @@ const Card = ({ dentist, button }) => {
             <Link to={`/dentist/${dentist.id}`}>
             Ver
             </Link>
-          </div>
           
         <button onClick={()=>{button(dentist)}} className="favButton">Add fav</button>
     </div>

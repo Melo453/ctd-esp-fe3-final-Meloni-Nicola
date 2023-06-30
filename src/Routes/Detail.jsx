@@ -20,11 +20,13 @@ const Detail = () => {
 
   return (
     <>
+    <div className='card-detail'>
       <h1>Detail Dentist id </h1>
       <h2>{dentist.name} </h2>
       <h2>{dentist.email} </h2>
       <h2>{dentist.phone} </h2>
       <h2>{dentist.website} </h2>
+      </div>
     </>
   )
 }

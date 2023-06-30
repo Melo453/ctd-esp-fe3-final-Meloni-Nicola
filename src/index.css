@@ -1,9 +1,71 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+:root {
+  --color-primario: #fff;
+  --color-secundario: #007BFF;
+  --color-terciario: #202226;
+  --color-cuaternario: #FFFAFF;
+  --color-quinario: #00ADB5;
+  /* Tipografía */
+  --tipo-principal: "Roboto", sans-serif;
+}
+
+form,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  display: inline;
+  color: inherit;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.light{
+  color: var(--color-terciario);
+  background-color: var(--color-primario);
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-cuaternario);
+  background-color: var(--color-primario);
+  /* opcional */
+  /* opcional */
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
   -webkit-font-smoothing: antialiased;
+  /* opcional */
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -48,7 +110,6 @@ footer {
   position: relative;
   bottom: 0;
   width: 90%;
-  height: 40px;
   margin-top: 2rem;
 }
 
@@ -61,29 +122,40 @@ footer > p{
   padding-top: 0.7rem;
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
 
-.card{
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+.card-grid-favs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px; 
+  padding: 20px;
   align-items: center;
-  width: 200px;
+  width: 95%;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
 }
 
+
+.card-grid ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px; 
+  padding: 20px;
+  align-items: center;
+  width: 95%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
 }
 
+.header{
+  overflow: hidden;
+    width: 100%;
+    position:fixed;
+    
+    box-shadow:  .5rem .5rem .8rem #1c1e22;
+    top: 0;
+    z-index: 1000;
+}
 .card-grid{
   display: flex;
   justify-content: space-evenly;
@@ -92,6 +164,24 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+}
+
+.card{
+  border: 0.5px solid rgb(136, 136, 136);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 350px;
+}
+
+.card-detail{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 350px;
 }
 
 table {
@@ -114,9 +204,95 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #12121296;
+  background: var(--color-terciario);
   color: white;
 }
 .dark > a {
   color: white;
+}
+
+.contact{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  align-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-contact{
+  width: 85%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent;
+  padding: .5rem .5rem;
+  border-radius: 5% ;
+  text-transform: uppercase;
+  color: var(--color-secundario);
+  box-shadow:  8px 8px 4px #1c1e22, 
+    -2px -5px 4px #262a2e;
+  justify-content: space-around;
+  align-content: center;
+  height: 450px;
+  gap: 1.5rem;
+}
+.h2-contact{
+  color: var(--color-secundario);
+}
+
+.p-contact{
+  color: var(--color-secundario);
+  width: 80%;
+  text-transform: none;
+}
+
+.form-formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  gap: 25px;
+}
+
+.form-formulario button{
+  cursor: pointer;
+  text-transform: uppercase;
+        padding: .4rem 1rem;
+        border-radius: 1.25rem;
+        background-color: #1a1b1e;
+        box-shadow:  3px 6px 4px #16171a, 
+        -4px -7px 4px #1e1f23;
+}
+
+.form-formulario button:hover{
+  
+  box-shadow:  1px 2px 1px #3e4048, 
+  -1px -2px 1px #090a0b;
+  color: var(--color-cuaternario);
+}
+
+.form-formulario button:active{
+  
+  box-shadow: inset 3px 6px 4px #1e1f23, 
+  inset -4px -7px 4px #16171a;
+  color: var(--color-cuaternario);
+}
+
+.name,
+.email{
+  padding: 15px 25px;
+        margin-bottom: 1em;
+        
+        text-align: center;
+        width:85%;
+        background: transparent;
+        border-radius: 5%;
+        color: var(--color-secundario);
+        box-shadow: inset 8px 8px 4px #1c1e22, 
+        inset -2px -5px 4px #262a2e;
 }
