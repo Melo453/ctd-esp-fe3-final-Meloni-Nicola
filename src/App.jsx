@@ -12,7 +12,7 @@ import './Components/Navbar/Navbar.css';
 function App() {
 
   const { state } = useContext(ContextGlobal);
-  const theme = state?.theme || "light";
+  const theme = state?.theme || "dark";
 
   return (
     <Router>
@@ -20,6 +20,7 @@ function App() {
           <Navbar/>
           <div className="sections">
             <Routes>
+              <Route path="/" element={<Home/>}  />
               <Route path="/home" element={<Home/>}  />
               <Route path="/dentist/:id" element={<Detail/>}  />
               <Route path="/contact" element={<Contact/>}  />

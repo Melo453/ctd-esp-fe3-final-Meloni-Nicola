@@ -11,7 +11,7 @@ const Navbar = () => {
   const {theme} = state;
 
   const toggleTheme = () => {
-    const newTheme = theme === THEME.DARK ? THEME.LIGHT : THEME.DARK
+    const newTheme = theme === THEME.LIGHT ? THEME.DARK : THEME.LIGHT
     //theme === THEME.DARK ? document.querySelector("body").classList.add("dark") : document.querySelector("body").classList.add("light");
     tema(newTheme);
   };
@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button className='nav_theme' onClick={toggleTheme} >Cambiar a {theme === THEME.DARK ? 'tema claro' : 'tema oscuro'}</button>
+      <button className='nav_theme' onClick={toggleTheme} >Cambiar a {theme === THEME.LIGHT ? 'tema oscuro' : 'tema claro'}</button>
 
     </nav>
   )

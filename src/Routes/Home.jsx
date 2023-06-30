@@ -10,7 +10,7 @@ import { ContextGlobal } from '../Components/utils/global.context';
 const Home = () => {
 
   const { state } = useContext(ContextGlobal);
-  const theme = state?.theme || "light";
+  const theme = state?.theme || "dark";
   
   const [dentist,setDentist] = useState([])
 

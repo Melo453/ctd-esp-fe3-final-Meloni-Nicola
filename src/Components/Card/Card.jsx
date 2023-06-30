@@ -5,7 +5,7 @@ import { ContextGlobal } from "../utils/global.context";
 const Card = ({ dentist, button }) => {
 
   const { state } = useContext(ContextGlobal);
-  const theme = state?.theme || "light";
+  const theme = state?.theme || "dark";
 
   const handleFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
