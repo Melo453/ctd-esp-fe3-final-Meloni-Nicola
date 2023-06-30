@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { ContextGlobal } from './utils/global.context'
-import { THEME } from '../themes/themej';
+import { ContextGlobal } from '../utils/global.context'
+import { THEME } from '../../themes/themej';
 import { Link } from 'react-router-dom';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -17,15 +17,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
-      <div>
-        <Link to={"/home"}>Home</Link>
-        <Link to={"/contact"}>Contact</Link>
-        <Link to={"/favs"}>Favs</Link>
+    <nav className='nav'>
+      <div className='nav__links'>
+        <Link className='nav_link' to={"/home"}>Home</Link>
+        <Link className='nav_link' to={"/contact"}>Contact</Link>
+        <Link className='nav_link' to={"/favs"}>Favs</Link>
       </div>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleTheme} >Cambiar a {theme === THEME.DARK ? 'tema claro' : 'tema oscuro'}</button>
+      <button className='nav_theme' onClick={toggleTheme} >Cambiar a {theme === THEME.DARK ? 'tema claro' : 'tema oscuro'}</button>
 
     </nav>
   )

@@ -1,0 +1,14 @@
+@import '../../app.css';
+
+.footer {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  bottom: -55;
+}
+.footer img {
+  width: 55%;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,34 @@
+@import '../../../public/scss/abstracts/mixins', '../../app.css';
+
+.nav{
+    @include flex(flex, nowrap, space-around,center);
+    width: 100%;
+    position:relative;
+    background: var(--color-terciario);
+    box-shadow:  .5rem .5rem .8rem #1c1e22;
+    top: 0;
+    z-index: 1000;
+    height: 5rem;
+
+    &_theme{
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &_theme:hover{
+        color: var(--color-quinario); 
+    }
+}
+
+.nav_link{
+    text-transform: uppercase;
+}
+
+.nav_link:hover{
+    color: var(--color-quinario); 
+}
+
+.nav__links{
+    @include flex(flex, nowrap, space-around,center);
+    gap: 1.5rem;
+}

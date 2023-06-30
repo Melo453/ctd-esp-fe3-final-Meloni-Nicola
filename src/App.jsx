@@ -1,12 +1,13 @@
 import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Routes/Home";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import { useContext } from "react";
 import { ContextGlobal } from "./Components/utils/global.context";
+import './Components/Navbar/Navbar.css';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
     <Router>
       <div className={`App ${theme}`}>
           <Navbar/>
-          <div>
+          <div className="sections">
             <Routes>
               <Route path="/home" element={<Home/>}  />
               <Route path="/dentist/:id" element={<Detail/>}  />

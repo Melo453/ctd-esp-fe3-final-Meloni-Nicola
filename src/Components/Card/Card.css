@@ -1,0 +1,130 @@
+@import '../../app.css';
+.section_card {
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+
+.section_card h1{
+  visibility: hidden;
+}
+
+.card{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5%;
+  border: 2px solid var(--color-primario);
+  text-transform: uppercase;
+  color: var(--color-secundario);
+  box-shadow: 8px 8px 4px var(--shadow-card), -2px -5px 4px var(--shadow-card2);
+  transition: all 0.3s ease-in-out;
+  height: 350px;
+  gap: 2.5rem;
+}
+
+.card__link, .card__button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--boton);
+  box-shadow: 3px 6px 4px var(--shadow-boton), -4px -7px 4px var(--shadow-boton2);
+}
+.card__link:hover, .card__button:hover {
+  box-shadow: 1px 2px 1px var( --shadow-boton-hover), -1px -2px 1px var( --shadow-boton-hover2);
+  color: var(--color-quinario);
+}
+.card__link:active, .card__button:active {
+  box-shadow: inset 3px 6px 4px var(--shadow-boton2-inset), inset -4px -7px 4px var(--shadow-boton-inset);
+  color: var(--color-quinario);
+}
+.card__links {
+  display: flex;
+  flex-flow: flex nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+.card .card_button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--boton);
+  box-shadow: 3px 6px 4px var(--shadow-boton), -4px -7px 4px var(--shadow-boton2);
+}
+.card .card_button:hover {
+  box-shadow: 1px 2px 1px var( --shadow-boton-hover), -1px -2px 1px var( --shadow-boton-hover2);
+  color: var(--color-quinario);
+}
+.card .card_button:active {
+  box-shadow: inset 3px 6px 4px var(--shadow-boton2-inset), inset -4px -7px 4px var(--shadow-boton2-inset2);
+  color: var(--color-quinario);
+}
+
+.card-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-grid ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.card-detail {
+  margin: 5rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5%;
+  border: 2px solid var(--color-primario);
+  text-transform: uppercase;
+  color: var(--color-secundario);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 8px 8px 4px var(--shadow-card), -2px -5px 4px var(--shadow-card2);
+  width: 350px;
+  height: 350px;
+  gap: 2.5rem;
+}
+
+.card-favs{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-grid-favs {
+  justify-content: center;
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  width: 95%;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}/*# sourceMappingURL=Card.css.map */
+
+.card-fav{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,47 @@
+@import '../../app.css';
+.nav {
+  display: flex;
+  flex-flow: flex nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  background: var(--color-nav);
+  box-shadow: 0.5rem 0.5rem 0.8rem var(--shadow-card);
+  top: 0;
+  z-index: 1000;
+  height: 5rem;
+}
+.nav_theme {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--color);
+  box-shadow: 3px 6px 4px var(--shadow-boton), -4px -7px 4px var(--shadow-boton2);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nav_theme:hover {
+  box-shadow: 1px 2px 1px var(--shadow-boton-hover), -1px -2px 1px var(--shadow-boton-hover2);
+  color: var(--color-quinario);
+}
+.nav_theme:active {
+  box-shadow: inset 3px 6px 4px var(--shadow-boton-inset), inset -4px -7px 4px var(--shadow-boton-inset2);
+  color: var(--color-quinario);
+}
+.nav_link {
+  text-transform: uppercase;
+}
+
+.nav_link:hover {
+  color: var(--color-quinario);
+}
+
+.nav__links {
+  display: flex;
+  flex-flow: flex nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.5rem;
+}/*# sourceMappingURL=Navbar.css.map */

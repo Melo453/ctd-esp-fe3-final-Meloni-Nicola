@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
-import Card from '../Components/Card'
+import React, { useContext, useState } from 'react'
+import Card from '../Components/Card/Card'
 import { useEffect } from 'react'
 import axios from 'axios'
+import '../Components/Card/Card.css';
+import { ContextGlobal } from '../Components/utils/global.context';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
+
+  const { state } = useContext(ContextGlobal);
+  const theme = state?.theme || "light";
   
   const [dentist,setDentist] = useState([])
 
@@ -35,7 +40,7 @@ const Home = () => {
   }
   
   return (
-    <main className="" >
+    <main className={`section_card `} >
       <h1>Home</h1>
       <div className='card-grid'>
         <ol>

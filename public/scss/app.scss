@@ -1,0 +1,5 @@
+@import './abstracts/variable' , './abstracts/_mixins' , './base/_reset';
+
+html {
+    scroll-behavior: smooth;
+}

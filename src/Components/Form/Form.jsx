@@ -26,7 +26,7 @@ const Form = () => {
           <input className="name" type="text" value={name} placeholder="Nombre" onChange={e => setName(e.target.value)} />
           <input type="email" className="email" value={email} placeholder="Email" onChange={e => setEmail(e.target.value)} />
           <button type='submit'>Enviar</button>
-          <p>{message }</p>
+          <p className="mensaje">{message }</p>
         </form>
       </div>
     </div>

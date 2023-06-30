@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+.dark {
+  --color-primario: #202226;
+  --color-secundario: #FFFAFF;
+  --color-terciario: #303030;
+  --color-nav: #292828;
+  --color-cuaternario: #1A1A6B;
+  --color-quinario: #39FF14;
+  /* Tipografía */
+  --tipo-principal: "Roboto", sans-serif;
+
+  --shadow-card: #1c1e22;
+  --shadow-card2: #262a2e;
+  --boton:#1a1b1e;
+  --shadow-boton: #16171a;
+  --shadow-boton2: #1e1f23;
+
+  --shadow-boton-inset: #16171a;
+  --shadow-boton2-inset: #1e1f23;
+
+  --shadow-boton-hover: #3e4048;
+  --shadow-boton-hover2: #090a0b;
+
+  color: var(--color-secundario);
+  background-color: var(--color-primario);
+
+}
+
+.light{
+  --color-primario: #FFFFFF;
+  --color-secundario: #000000;
+  --color-terciario: #E5E5E5;
+  --color-cuaternario: #B0D0D3;
+  --color-quinario: #007BFF;
+
+  --shadow-card: #d9d9d9;
+  --shadow-card2: #f3f2f2;
+  --boton:#ececec;
+  --shadow-boton: #c9c9c9;
+  --shadow-boton2: #f3f3f3;
+
+  --shadow-boton-inset: #c9c9c9;
+  --shadow-boton2-inset: #ffffff;
+
+  --shadow-boton-hover: #b8b8b9;
+  --shadow-boton-hover2: #7a7979;
+
+  /* Tipografía */
+  --tipo-principal: "Roboto", sans-serif;
+
+  color: var(--color-secundario);
+  background-color: var(--color-primario);
+
+}
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: inline;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1rem;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  display: inline;
+  color: inherit;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  display: inline;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+
+  /* opcional */
+  /* opcional */
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=app.css.map */
+
+.sections{
+  min-height: 100vh;
+}
