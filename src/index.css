@@ -9,6 +9,24 @@ html {
   scroll-behavior: smooth;
 }
 
+table {
+  border-collapse: collapse;
+     border-spacing: 0;
+     width: 100%;
+     display: table;
+     border: 1px solid #ccc;
+ 
+ }
+ 
+ td, th {
+   border: 1px solid #dddddd;
+   text-align: left;
+   padding: 8px;
+ }
+ 
+ tr:nth-child(even) {
+   background-color: #dddddd;
+ }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 :root {
   --color-primario: #fff;
@@ -184,24 +202,6 @@ footer > p{
   height: 350px;
 }
 
-table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 
 .dark{
   background: var(--color-terciario);
@@ -211,6 +211,7 @@ tr:nth-child(even) {
   color: white;
 }
 
+/* Contact */
 .contact{
   height: 100vh;
   display: flex;
